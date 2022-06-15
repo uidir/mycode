@@ -1,0 +1,12 @@
+// example - rand.Seed()
+
+// by default rand.Seed(1), so we want to change this value or the
+// pseudo-random libraries will create the same values every time the program is run
+// this is called "deterministic randomness"
+
+// create some entropy as to not allow rand.Seed(1) to remain the default
+rand.Seed(time.Now().UnixNano())
+
+// display a value between 0 and 99
+fmt.Print(rand.Intn(100))
+
